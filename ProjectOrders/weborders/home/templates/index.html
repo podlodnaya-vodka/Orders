@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block orders %}
+{% load static %}
+    {% for order in orders %}
+    <div id="{{order.git}}" onclick="Open({{order.git}})">
+         <div
+        {% if order.delete == 1 %}
+        class="order delete">
+        {% elif order.correct == 1 %}
+        class="order correct">
+        {% else %}
+        class="order">
+        {% endif %}
+        <div>{{order.git}}</div>
+        <div>{{order.dept}}</div>
+        <div>{{order.count}}</div>
+        <div>{{order.price}}</div>
+        <div>{{order.dateb}}</div>
+        <div>{{order.datef}}</div>
+        <div>{{order.sum}}</div>
+             </div>
+    </div>
+    {% endfor %}
+<script type="text/javascript" src="{% static '/js/index.js' %}" ></script>
+{% endblock %}

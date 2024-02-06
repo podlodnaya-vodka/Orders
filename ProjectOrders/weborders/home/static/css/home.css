@@ -1,0 +1,19 @@
+.order {
+    display: flex;
+}
+.order div {
+    height: 50px;
+    width: 150px;
+    padding-top: 15px;
+    background-color: rgb(209, 241, 218);
+    text-align: center;
+    margin: 1px;
+}
+
+.delete div {
+    background-color: rgb(247, 180, 174);
+}
+
+.correct div {
+    background-color: rgb(253, 232, 177);
+}
